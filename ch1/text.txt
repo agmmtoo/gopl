@@ -1,0 +1,6 @@
+line one
+line two
+line three
+I'm the duplicate one
+I'm the duplicate one
+line four
