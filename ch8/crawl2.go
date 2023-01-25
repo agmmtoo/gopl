@@ -24,6 +24,7 @@ func crawl(url string) []string {
 }
 
 func main() {
+
 	worklist := make(chan []string)
 
 	var n int // number of pending sends to worklist
