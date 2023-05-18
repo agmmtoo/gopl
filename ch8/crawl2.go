@@ -39,6 +39,7 @@ func main() {
 			for _, link := range list {
 				if !seen[link] {
 					seen[link] = true
+					n++
 					go func(link string) {
 						worklist <- crawl(link)
 					}(link)
