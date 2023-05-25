@@ -6,6 +6,8 @@ import (
 )
 
 func TestCheckQuotationNotifiesUser(t *testing.T) {
+	saved := notifyUser
+	defer func() { notifyUser = saved }()
 	var notifiedUser, notifiedMsg string
 	notifyUser = func(user, msg string) {
 		notifiedUser, notifiedMsg = user, msg
