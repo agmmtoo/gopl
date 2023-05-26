@@ -6,10 +6,10 @@ import (
 )
 
 func Any(value interface{}) string {
-	return formatAtom(reflect.ValueOf(value))
+	return FormatAtom(reflect.ValueOf(value))
 }
 
-func formatAtom(v reflect.Value) string {
+func FormatAtom(v reflect.Value) string {
 	switch v.Kind() {
 	case reflect.Invalid:
 		return "invalid"
